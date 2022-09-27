@@ -8,8 +8,12 @@ export const useStyles = makeStyles((theme: Theme) => {
       return {
         display: 'grid',
         gridTemplateColumns: '1fr 1fr 1fr',
-        justifyContent: 'space-between',
+        justifyItems: 'center',
         gap: theme.spacing(6, 6),
+
+        [theme.breakpoints.up('xl')]: {
+          gridTemplateColumns: '1fr 1fr 1fr 1fr',
+        },
 
         [theme.breakpoints.between('sm', 'md')]: {
           gridTemplateColumns: '1fr 1fr',
